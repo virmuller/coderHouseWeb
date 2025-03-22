@@ -1,0 +1,300 @@
+/* --- Tu CSS actual, intacto --- */
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
+    font-family: sans-serif;
+    color: #081c15;
+}
+
+/* Encabezado */
+.header-bloque {
+    width: 100%;
+    background-color: #FEFAE0;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #3A5A40;
+    position: relative;
+    background-image: url('../img/dunasdetaton.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(32, 32, 32, 0.6);
+    padding: 4rem 1rem;
+}
+
+.header-bloque::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 0;
+}
+
+.header-bloque h1,
+.header-bloque p {
+    position: relative;
+    z-index: 1;
+}
+
+.titulo-principal {
+    color: #BC6C25;
+    font-weight: bold;
+    font-size: 80px;
+    text-shadow: #FEFAE0;
+}
+
+.subtitulo-del-principal {
+    color: #BC6C25;
+    font-weight: bold;
+    font-size: 35px;
+    margin-top: 10px;
+    text-shadow: #FEFAE0;
+}
+
+/* Navbar general */
+.navbar {
+    background-color: #344E41 !important;
+    border-bottom: 2px solid #3A5A40;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.nav-item {
+    flex: 1;
+}
+
+.nav-link {
+    color: #DAD7CD !important;
+    font-weight: bold;
+    padding: 10px 0;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #588157 !important;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+/* Botones */
+.btn-custom {
+    background-color: #344E41;
+    font-weight: bold;
+    color: #FEFAE0;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #A3B18A;
+    color: #283618;
+    border: 1px solid #283618;
+}
+
+/* Footer */
+.custom-footer {
+    background-color: #344E41;
+    padding: 30px 0;
+    text-align: center;
+    border-color: #588157;
+}
+
+.custom-footer p {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #DAD7CD;
+}
+
+.footer-link {
+    color: #DAD7CD;
+    text-decoration: underline;
+    margin: 0 10px;
+    font-weight: initial;
+}
+
+.footer-link:hover {
+    color: #A3B18A;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Carrusel */
+.carousel.slide {
+    border: 2px solid #344E41;
+    background-color: #3A5A40;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Formulario contacto */
+.contact-form {
+    background-color: #DAD7CD;
+    padding: 20px;
+    border: 2px solid #3A5A40;
+    border-radius: 5px;
+    color: #344E41;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    border: 1px solid #3A5A40;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 8px;
+    width: 100%;
+}
+
+.contact-form button {
+    background-color: #3A5A40;
+    color: #A3B18A;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button:hover {
+    background-color: #A3B18A;
+    color: #3A5A40;
+    border: 1px solid #3A5A40;
+}
+
+/* Personalización de las cards de guías */
+.guia-card {
+    background-color: #A3B18A;
+    border: 2px solid #588157;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #588157, #A3C49D, #E8F6E0);
+}
+
+.guia-card .card-body {
+    color: #081c15;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.card-body {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.card-body .btn-custom {
+    margin-top: auto; 
+}
+
+/*Cards de imagenes*/
+.destino-img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destino-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* FIGCAPTION */
+figure {
+    transition: transform 0.3s ease;
+    text-align: center; 
+}
+
+figure figcaption {
+    margin-top: 10px; 
+    font-weight: normal;
+    color: #344E41;
+}
+
+figure:hover figcaption {
+    color: #588157;
+    font-weight: bold;
+    transform: scale(1.1);
+}
+
+.custom-margin {
+    margin-right: 30px;
+}
+
+/* --- ACÁ ESTÁN LAS MEDIA QUERIES --- */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 50px;
+    }
+
+    .subtitulo-del-principal {
+        font-size: 25px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
+
+    .header-bloque {
+        padding: 2rem 1rem;
+    }
+
+    .carousel.slide {
+        padding: 5px;
+    }
+
+    .contact-form {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 35px;
+    }
+
+    .subtitulo-del-principal {
+        font-size: 20px;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .header-bloque {
+        padding: 1rem 0.5rem;
+    }
+
+    .custom-margin {
+        margin-right: 10px;
+    }
+}
