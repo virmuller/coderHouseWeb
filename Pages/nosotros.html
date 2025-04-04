@@ -18,8 +18,8 @@
 
     <!-- Estilos -->
     <link rel="stylesheet" href="../css/styles.css">
-
-
+    <!-- Librerias -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Fuente -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,9 +32,8 @@
   <body>
     <!-- Encabezado -->
     <header class="header-bloque">
-      <h1 class="titulo-principal">Excursiones Cordilleranas</h1>
-      <p class="subtitulo-del-principal">
-        Catamarca, un tesoro escondido entre montañas
+      <h1 class="titulo-principal animate__animated animate__fadeIn">Excursiones Cordilleranas</h1>
+      <p class="subtitulo-del-principal animate__animated animate__fadeIn">Catamarca, un tesoro escondido entre montañas
       </p>
     </header>
 
@@ -213,5 +212,14 @@
         </p>
       </div>
     </footer>
+    <script>
+      function fadeOutPage(event) {
+          event.preventDefault(); 
+          document.body.classList.add("fade-out");
+          setTimeout(() => {
+              window.location.href = event.target.href; 
+          }, 800); 
+      }
+  </script>
   </body>
 </html>

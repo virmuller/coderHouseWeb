@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+.fade-out {
+    opacity: 1;
+    transition: opacity 2.5s ease-in-out;
+}
 
 body {
     background: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
@@ -142,6 +146,10 @@ body {
     max-width: 100%;
     margin: 20px auto;
 }
+.carousel-item img {
+    animation: fadeIn 1s ease-in-out, zoomIn 1.5s ease-in-out;
+}
+
 
 /* Formulario contacto */
 .contact-form {
@@ -236,11 +244,12 @@ figure:hover figcaption {
     transform: scale(1.1);
 }
 
+
 .custom-margin {
     margin-right: 30px;
 }
 
-/* --- ACÁ ESTÁN LAS MEDIA QUERIES --- */
+/* ---MEDIA QUERIES --- */
 @media (max-width: 768px) {
     .titulo-principal {
         font-size: 50px;
@@ -295,4 +304,22 @@ figure:hover figcaption {
     .custom-margin {
         margin-right: 10px;
     }
+}
+/*-Animaciones-*/
+.fade-out {
+    animation: fadeOut 1.5s;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.titulo-principal {
+    animation: fadeInUp 1.5s ease-in-out;
+}.subtitulo-del-principal {
+    animation: fadeInUp 1.5s ease-in-out;
 }
