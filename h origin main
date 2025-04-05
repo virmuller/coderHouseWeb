@@ -1,0 +1,13 @@
+[33m5f67fb0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Mejora de RAIZ / con nueva correccion de ruta.
+[33m752ba0d[m Correccion a rutas .Pages
+[33m0c110ce[m Correccion de estilos en botones y rutas - Correcto compilado de estilos
+[33m2e22e3a[m Agregadas animaciones con Animate.css: se incluyó el link en todas las páginas, se añadió el script correspondiente y se aplicaron animaciones a elementos seleccionados
+[33m5b00075[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Refactorización de estilos: Separé las carpetas CSS/SCSS, corregí las rutas e implementé SCSS compilado.
+[33m1145013[m Corrección de rutas y renombre de carpeta
+[33m7fdb096[m Mejora de tabulacion
+[33mf9d68a2[m Edit <a index
+[33m281895f[m Merge branch 'main' of https://github.com/virmuller/coderHouseWeb
+[33m46bb125[m Modified Styles
+[33m7d03a89[m Add files via upload
+[33m8ccfffe[m Add files via upload
+[33m4e14b10[m PreEntrega2
