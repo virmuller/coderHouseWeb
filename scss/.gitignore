@@ -1,5 +1,16 @@
-*.map
-node_modules/
-.vscode/
+# Archivos de sistema
 .DS_Store
 Thumbs.db
+
+# Configuración del editor
+.vscode/
+
+# Dependencias
+node_modules/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Mapas de SCSS
+*.css.map
