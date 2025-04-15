@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
+  font-family: sans-serif;
+  color: #081c15;
+}
+
 .fade-out {
   opacity: 1;
   transition: opacity 2.5s ease-in-out;
@@ -18,12 +28,6 @@
     opacity: 0;
   }
 }
-body {
-  background: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
-  font-family: sans-serif;
-  color: #081c15;
-}
-
 .header-bloque {
   width: 100%;
   background-color: #FEFAE0;
@@ -47,8 +51,7 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 0;
 }
-.header-bloque h1,
-.header-bloque p {
+.header-bloque h1, .header-bloque p {
   position: relative;
   z-index: 1;
 }
@@ -184,8 +187,7 @@ body {
 .contact-form label {
   font-weight: bold;
 }
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
   border: 1px solid #3A5A40;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -221,7 +223,7 @@ body {
 }
 
 .destino-img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 .destino-img:hover {
   transform: scale(1.05);

@@ -1,15 +1,33 @@
+// VARIABLES
 $primary-color: #344E41;
 $secondary-color: #3A5A40;
 $accent-color: #A3B18A;
 $text-color: #081c15;
 $background-gradient: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
 
+// MIXIN para transiciones suaves
+@mixin transition-smooth {
+  transition: all 0.3s ease;
+}
+
+// RESET + scroll horizontal bloqueado 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden; // Corrección de entrega 3 - evita scroll lateral
+}
+
+body {
+  background: $background-gradient;
+  font-family: sans-serif;
+  color: $text-color;
+}
+
+// ANIMACIONES
 .fade-out {
   opacity: 1;
   transition: opacity 2.5s ease-in-out;
@@ -25,12 +43,7 @@ $background-gradient: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
   }
 }
 
-body {
-  background: $background-gradient;
-  font-family: sans-serif;
-  color: $text-color;
-}
-
+// HEADER
 .header-bloque {
   width: 100%;
   background-color: #FEFAE0;
@@ -47,16 +60,12 @@ body {
   &::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 0;
   }
 
-  h1,
-  p {
+  h1, p {
     position: relative;
     z-index: 1;
   }
@@ -79,6 +88,7 @@ body {
   animation: fadeInUp 1.5s ease-in-out;
 }
 
+// NAVBAR
 .navbar {
   background-color: $primary-color !important;
   border-bottom: 2px solid $secondary-color;
@@ -111,7 +121,7 @@ body {
     color: #DAD7CD !important;
     font-weight: bold;
     padding: 10px 0;
-    transition: all 0.3s ease;
+    @include transition-smooth; // usando mixin
 
     &:hover {
       color: #588157 !important;
@@ -125,6 +135,7 @@ body {
   }
 }
 
+// BOTÓN PERSONALIZADO
 .btn-custom {
   background-color: $primary-color;
   font-weight: bold;
@@ -132,7 +143,7 @@ body {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  transition: all 0.3s ease;
+  @include transition-smooth; // usando mixin
 
   &:hover {
     background-color: $accent-color;
@@ -141,6 +152,7 @@ body {
   }
 }
 
+// FOOTER
 .custom-footer {
   background-color: $primary-color;
   padding: 30px 0;
@@ -166,6 +178,7 @@ body {
   }
 }
 
+// CARRUSEL
 .carousel {
   &.slide {
     border: 2px solid $primary-color;
@@ -185,6 +198,7 @@ body {
   }
 }
 
+//  FORMULARIO CONTACTO
 .contact-form {
   background-color: #DAD7CD;
   padding: 20px;
@@ -200,8 +214,7 @@ body {
     font-weight: bold;
   }
 
-  input,
-  textarea {
+  input, textarea {
     border: 1px solid $secondary-color;
     border-radius: 5px;
     margin-bottom: 10px;
@@ -215,6 +228,7 @@ body {
   }
 }
 
+// CARDS DE GUÍAS
 .guia-card {
   background: linear-gradient(135deg, #588157, #A3C49D, #E8F6E0);
   border: 2px solid #588157;
@@ -242,8 +256,9 @@ body {
   }
 }
 
+// IMÁGENES HOVER DESTINO
 .destino-img {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  @include transition-smooth; // usando mixin
 
   &:hover {
     transform: scale(1.05);
@@ -251,6 +266,7 @@ body {
   }
 }
 
+// FIGCAPTION ANIMADO
 figure {
   transition: transform 0.3s ease;
   text-align: center;
@@ -268,6 +284,7 @@ figure {
   }
 }
 
+// MARGEN RESPONSIVE
 .custom-margin {
   margin-right: 30px;
 
