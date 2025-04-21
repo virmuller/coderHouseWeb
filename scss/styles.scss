@@ -108,6 +108,11 @@ body {
   text-shadow: #FEFAE0;
   animation: fadeInUp 1.5s ease-in-out;
 
+  @media (max-width: 576px) {
+    .header-bloque {
+    padding: 2rem 0.5rem;  
+    }
+  }
   @media (max-width: 768px) {
     font-size: 50px; 
   }
