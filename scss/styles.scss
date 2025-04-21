@@ -18,7 +18,7 @@ $background-gradient: linear-gradient(to bottom, #8C7352, #e7d1b2, #f3ece4);
 }
 
 html, body {
-  overflow-x: hidden; // Corrección de entrega 3 - evita scroll lateral
+  overflow-x: hidden; 
 }
 
 body {
@@ -56,6 +56,7 @@ body {
   background-position: center;
   color: white;
   text-shadow: 1px 1px 3px rgba(32, 32, 32, 0.6);
+  overflow: hidden; 
 
   &::after {
     content: "";
@@ -77,6 +78,14 @@ body {
   font-size: 80px;
   text-shadow: #FEFAE0;
   animation: fadeInUp 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    font-size: 50px; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 36px; 
+  }
 }
 
 .subtitulo-del-principal {
@@ -86,6 +95,13 @@ body {
   margin-top: 10px;
   text-shadow: #FEFAE0;
   animation: fadeInUp 1.5s ease-in-out;
+
+  @media (max-width: 768px) {
+    font-size: 24px; 
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px; 
 }
 
 // NAVBAR
@@ -121,7 +137,7 @@ body {
     color: #DAD7CD !important;
     font-weight: bold;
     padding: 10px 0;
-    @include transition-smooth; // usando mixin
+    @include transition-smooth;
 
     &:hover {
       color: #588157 !important;
@@ -143,7 +159,7 @@ body {
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  @include transition-smooth; // usando mixin
+  @include transition-smooth;
 
   &:hover {
     background-color: $accent-color;
@@ -198,7 +214,7 @@ body {
   }
 }
 
-//  FORMULARIO CONTACTO
+// FORMULARIO CONTACTO
 .contact-form {
   background-color: #DAD7CD;
   padding: 20px;
@@ -258,7 +274,7 @@ body {
 
 // IMÁGENES HOVER DESTINO
 .destino-img {
-  @include transition-smooth; // usando mixin
+  @include transition-smooth;
 
   &:hover {
     transform: scale(1.05);
