@@ -43,6 +43,35 @@ body {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // HEADER
 .header-bloque {
   width: 100%;
@@ -102,6 +131,7 @@ body {
 
   @media (max-width: 480px) {
     font-size: 18px; 
+  }
 }
 
 // NAVBAR
@@ -284,27 +314,16 @@ body {
 
 // FIGCAPTION ANIMADO
 figure {
-  transition: transform 0.3s ease;
-  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 
   figcaption {
-    margin-top: 10px;
-    font-weight: normal;
-    color: $primary-color;
+    opacity: 0;
+    transform: translateY(10px);
+    @include transition-smooth;
   }
 
   &:hover figcaption {
-    color: #588157;
-    font-weight: bold;
-    transform: scale(1.1);
-  }
-}
-
-// MARGEN RESPONSIVE
-.custom-margin {
-  margin-right: 30px;
-
-  @media (max-width: 480px) {
-    margin-right: 10px;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
